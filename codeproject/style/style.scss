@@ -1,0 +1,167 @@
+@import "defaults";
+body{
+    background-color:$darkgrey;
+}
+#login{
+    min-height: 70vh;
+    width:600px;
+    position: absolute;
+    top:15vh;
+    left:50%;
+    transform: translate(-50%);
+    background-color:$grey;
+    border-radius:10px;
+        #logo{
+            margin:auto;
+            width: 100%;
+            height:200px;
+                img{
+                    margin:auto;
+                    height:100px;
+                    width:400px;
+                    object-fit: center;
+                }
+        }
+        #login_form{
+            margin:auto;
+            width:600px;
+                form{
+                    width:80%;
+                    margin-left:10%;
+                        .field{
+                            margin-top:30px;
+                            display: flex;
+                            flex-flow: column-reverse;
+                                input{
+                                    background-color: transparent;
+                                    color:$white;
+                                    font-size: 1.5em;
+                                    border: 0;
+                                    border-bottom: 1px solid $lightgrey;
+                                    border-radius: 0;
+                                    padding: 0;
+                                    transition: all 0.2s;
+                                    touch-action: manipulation;
+                                    cursor: text;
+                                        &:focus{
+                                            opacity: 1;
+                                            outline: 0;
+                                            border-bottom: 1px solid $emerald;
+                                        }
+                                        &:focus ~ label{
+                                            color:$emerald;
+                                        }
+                                        &:placeholder-shown + label{
+                                            cursor: text;
+                                            max-width: 66.66%;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            transform-origin: left bottom;
+                                            transform: translate(0, 2.125rem) scale(1.1);
+                                        }
+                                        &:not(:placeholder-shown) + label,
+                                        &:focus + label {
+                                            transform: translate(0, 0) scale(1);
+                                            cursor: pointer;
+                                        }
+                                }
+                                label{
+                                    font-size:18px;
+                                    color:$white;
+                                    transition: all 0.2s;
+                                    touch-action: manipulation;
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.05em;   
+                                }
+                        }
+                        #sugestion{
+                            #check_me{
+                                padding-top:50px;
+                                    input{
+                                        color:$white;
+                                    }
+                                    label{
+                                        color:$white ;
+                                    }
+                            }
+                            #forget{
+                                padding-top:50px;
+                                a{
+                                    color:$white;
+                                    text-decoration: none;
+                                        &:hover{
+                                            color:$emerald
+                                        }
+                                }
+                            }
+                        }
+                }
+        }
+
+}
+.wrap{
+    margin-top:50px;
+    [class^="btn-"] {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 60px;
+        max-width: 200px;
+        margin: 1rem auto;
+        text-transform: uppercase;
+        border: 1px solid currentColor;
+      }
+      a {
+        text-align: center;
+        text-decoration: none;
+        line-height: 60px;
+        
+      }
+      .btn-6 {
+          margin-bottom:100px;
+        color:$white;;
+      }
+      .btn-6 span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #1c595d;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      .btn-6:hover {
+        color: #cbe4e6;
+      }
+      .btn-6:hover span {
+        width: 225%;
+        height: 562.5px;
+      }
+      .btn-6:active {
+        background-color: #2e949b;
+      }
+      
+}
+.large{
+    position:absolute;
+    animation:1s larger forwards;
+}
+@keyframes larger{
+    0%{
+        top:15vh;
+        left:50%;
+        transform: translate(-50%);
+    }
+    100%{
+        top:0;
+        left:50%;
+        transform:translate(-50%);
+        width: 100vw;
+        height: 100vh;
+    }
+}

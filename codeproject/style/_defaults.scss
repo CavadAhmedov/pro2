@@ -1,0 +1,27 @@
+/*DEFAULTS */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type:none;
+}
+p{
+    margin:0;
+}
+ul{
+    margin:0;
+}
+
+/* COLORS */
+
+$emerald :#1FD6D0;
+$grey:#292F37;
+$lightgrey:#373E48;
+$darkgrey:#21252B;
+$white:#fff;
